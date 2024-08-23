@@ -2,6 +2,11 @@
 
 Automatically generate Python API clients from OpenAPI 3.1.0 specifications.
 
+## Author
+Brij Kishore Pandey
+Linkedin - [brijpandeyji]https://www.linkedin.com/in/brijpandeyji/
+GitHub: honestsoul
+
 ## Features and Capabilities
 
 - Parses OpenAPI 3.1.0 specifications
