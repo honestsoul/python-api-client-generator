@@ -4,7 +4,7 @@ Automatically generate Python API clients from OpenAPI 3.1.0 specifications.
 
 ## Author
 Brij Kishore Pandey
-Linkedin - [brijpandeyji]https://www.linkedin.com/in/brijpandeyji/
+Linkedin - https://www.linkedin.com/in/brijpandeyji/
 GitHub: honestsoul
 
 ## Features and Capabilities
@@ -167,6 +167,15 @@ We are committed to improving and expanding the API Client Generator. Here are s
 
 10. Multi-language support:
     - Extend code generation to other popular languages (e.g., JavaScript, Java, Go)
+   
+
+## Compatibility
+
+This package is compatible with Python 3.9 and 3.10. 
+
+**Note:** There are currently known issues with Python 3.11 due to compatibility problems with some dependencies. We are working on resolving these issues and hope to support Python 3.11 in a future release.
+
+[Rest of your README content]
 
 We welcome contributions and suggestions for additional features or improvements!
 
