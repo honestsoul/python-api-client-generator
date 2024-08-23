@@ -10,7 +10,7 @@ async-timeout==3.0.1
 MarkupSafe==2.0.1
 multidict==5.1.0
 typing-extensions==3.10.0.0
-yarl==1.6.3
+yarl==1.8.2  # Updated to a version compatible with Python 3.11
 jsonschema==4.4.0
 python-jose==3.3.0
 
