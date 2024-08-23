@@ -49,4 +49,4 @@ jobs:
         python -c "import sys; print(sys.path)"
     - name: Test with pytest
       run: |
-        pytest -v testing
+        pytest -v tests
