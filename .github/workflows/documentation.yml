@@ -10,22 +10,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: actions/setup-python@v2
+      - name: Set up Python
+        uses: actions/setup-python@v2
         with:
           python-version: 3.x
       - name: Install dependencies
         run: |
           pip install mkdocs-material
           pip install mkdocstrings[python]
-      - name: Debug info
-        run: |
-          echo "Current directory:"
-          pwd
-          echo "Directory contents:"
-          ls -R
-          echo "MkDocs version:"
-          mkdocs --version
-      - name: Build and deploy documentation
-        run: |
-          mkdocs build --verbose
-          mkdocs gh-deploy --force
+      - name: Build documentation
+        run: mkdocs build
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./site
