@@ -4,7 +4,7 @@ jinja2==3.0.1
 pyyaml==6.0
 urllib3==1.26.6
 certifi==2021.5.30
-chardet==4.0.0
+chardet>=2.0,<4.0
 idna==2.10
 async-timeout==3.0.1
 MarkupSafe==2.0.1
@@ -13,3 +13,8 @@ typing-extensions==3.10.0.0
 yarl==1.6.3
 jsonschema==4.4.0
 python-jose==3.3.0
+
+# Development dependencies
+pytest
+black
+isort
