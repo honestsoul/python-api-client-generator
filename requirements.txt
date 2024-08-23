@@ -14,7 +14,9 @@ yarl==1.6.3
 jsonschema==4.4.0
 python-jose==3.3.0
 
+# Test dependencies
+pytest==7.3.1
+
 # Development dependencies
-pytest
 black
 isort
