@@ -54,4 +54,7 @@ markdown_extensions:
   - attr_list
 
 copyright: |
-  &copy; 2024 <a href="https://github.com/honestsoul"  target="_blank" rel="noopener">Your Name</a>
+  &copy; 2024 <a href="https://github.com/honestsoul" target="_blank" rel="noopener">HonestSoul</a>
+
+repo_url: https://github.com/honestsoul/python-api-client-generator
+repo_name: honestsoul/python-api-client-generator
