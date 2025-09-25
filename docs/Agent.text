@@ -1,0 +1,48 @@
+In a multi-agent system, each agent relies on the right slice of information to make decisions. If the context is noisy, stale, duplicated, or oversized, the agents either hallucinate, over-spend tokens, or mis-coordinate.
+A Context Readiness layer ensures that any agent only sees information that is clean, fresh, relevant, and within budget before acting.
+
+Key Steps for Context Readiness
+
+Intent → Source Routing
+Map the task to the correct data sources (knowledge base, code repo, tickets, web) before global retrieval.
+
+Normalize & Canonicalize
+Clean and standardize fields; apply glossary rules so synonyms map to consistent terms.
+
+Deduplicate & Rank
+Collapse near-duplicate chunks and rank the remaining ones by authority → recency → relevance.
+
+Evidence Cards
+For each retained chunk, attach a short summary (≤120 tokens) plus its source reference {uri, span, captured_at}.
+
+Freshness Check
+Drop or re-fetch context that is older than the allowed max_age for that domain.
+
+Budget Fit
+Enforce limits (max_docs, max_tokens, max_tool_calls). If confidence is still low, allow one round of broader recall.
+
+Summarization Pyramid
+Build a three-layer view:
+
+Raw snippets (trimmed)
+
+Per-source summaries
+
+Overall task synopsis with backlinks
+
+Conflict Handling
+If multiple sources disagree, resolve by authority > recency > consensus, or mark for clarification.
+
+Package & Gate
+Assemble a Context Contract (goals, evidence list, synopsis, constraints). Run the “ready check”:
+
+citation coverage OK
+
+freshness within bounds
+
+token budget respected
+
+ranker score above threshold
+
+Lineage Logging
+Hash artifacts and the final package so you can reproduce and debug outputs later.
